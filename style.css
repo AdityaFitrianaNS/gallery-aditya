@@ -8,6 +8,7 @@
   text-decoration: none;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
+  font-style: normal;
 }
 :root {
   /* Color */
@@ -20,6 +21,17 @@
   --big-font: 51.2px;
   --medium-font: 28px;
   --p-font: 16px;
+}
+/* Scroll Bar */
+html::-webkit-scrollbar {
+  width: 5px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: rgb(81 191 160);
+  border-radius: 80px;
 }
 
 section {
@@ -93,27 +105,36 @@ h4 {
   overflow: hidden;
   background: rgb(28,40,68,0.8);
 }
-.portfolio-container .box .content .bi{
-  color: #fff;
-  font-size: 28px;
-  border-radius: 5px;
-  padding: 0px 5px;
-  align-items: center;
-  background: #fff;
-  color: #3c7a6d;
-  }
 .portfolio-container .box .content h3{
   color: #fff;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
   margin: 5px;
   align-items: center;
+}
+.portfolio-container .box .content .bi{
+  color: #fff;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 2px 5px;
+  align-items: center;
+  background: #fff;
+  color: #3c7a6d;
 }
 .portfolio-container .box:hover .content{
   top: 0;
   transition: 0.3s;
   text-align: center;
 }
+.modal-body .bx {
+  font-size: 42px;
+  border-radius: 5px;
+  padding: 5px 0px;
+  margin-left: -9px;
+  align-items: center;
+  background: #fff;
+}
+
 .follow {
   margin: 50px 0px;
 }
@@ -135,22 +156,24 @@ h4 {
   transition      : transform 0.3s;
   font-size: 22px;
   align-items: center;
-  margin-right: 8px;
+  margin-right: 5px;
   text-align: center;
 }
+
 /* Social colors */
+.social-media button.linkedin {
+  background: var(--button-color);
+}
+.social-media button.github {
+  background: var(--button-color);
+}
 .social-media button.devianart {
   background: var(--button-color);
 }
 .social-media button.instagram {
   background: var(--button-color);
 }
-.social-media button.twitter {
-  background: var(--button-color);
-}
-.social-media button.github {
-   background: var(--button-color);
-}
+
 .follow .social-media button:hover {
   transform: scale(1.1);
 }
@@ -160,6 +183,7 @@ h4 {
   }
   h2 {
     font-size: 26px;
+    font-weight: 600;
   }
   .portfolio-container .box {
     height: 250px;
@@ -174,10 +198,10 @@ h4 {
     font-size: 24px;
   }
   .portfolio-container .box .content .bi{
-    font-size: 26px;
+    font-size: 21px;
   }
   .portfolio-container .box .content h3{
-    font-size: 20px;
+    font-size: 23px;
   }
 }
 @media (max-width: 1366px) {
@@ -200,10 +224,10 @@ h4 {
     font-size: 22px;
   }
   .portfolio-container .box .content .bi{
-    font-size: 23px;
+    font-size: 19px;
   }
   .portfolio-container .box .content h3{
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media (max-width: 991px) {
@@ -218,6 +242,9 @@ h4 {
   }
   .portfolio-container {
     grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  }
+  .portfolio-container .box .content h3{
+    font-size: 21px;
   }
 }
 @media (max-width: 768px){
